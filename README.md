@@ -1,4 +1,5 @@
-# github-user-information
+# Github User Information
+A Vue app to show github's information of a surveyed user.
 
 ## Project setup
 ```
