@@ -7,11 +7,11 @@
 
 <script>
    export default {
-       name: "HomeUser"
+       name: "HomeNotUser"
    }
 </script>
 
-<style>
+<style scoped> 
     img{
         height: 250px;
         width: 250px;

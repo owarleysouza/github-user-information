@@ -20,7 +20,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        margin: 0px 3rem;
+        margin: 0 9rem;
     }
 
     h2{

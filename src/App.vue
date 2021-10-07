@@ -1,26 +1,31 @@
 <template>
   <Header/>
-  <HomeUser v-if="!searchedUser"/>
+  <HomeNotUser v-if="!searchedUser"/>
   <UserCard v-if="searchedUser"/>
+  <UserInfos/>
+  <UserRepos/>
 </template>
 
 <script>
 import Header from './components/Header.vue';
-import HomeUser from './components/HomeUser.vue';
+import HomeNotUser from './components/HomeNotUser.vue';
 import UserCard from './components/UserCard.vue';
-
+import UserInfos from './components/UserInfos.vue';
+import UserRepos from './components/UserRepos.vue'
 
 export default {
   name: 'App',
   data() {
     return {
-      searchedUser: false
+      searchedUser: true
     } 
   },
   components: {
-    HomeUser,
+    HomeNotUser,
     Header,
-    UserCard
+    UserCard,
+    UserInfos,
+    UserRepos
   }
 }
 </script>

@@ -1,9 +1,9 @@
 <template>
     <div class="user-profile">
-        <img alt="Not User" src="../assets/not-user.png">
+        <img alt="User Photo" src="../assets/blank-avatar.png">
         <div class="user-infos">
-            <h1>Warley Souza</h1>
-            <span>@warleys14</span>
+            <span class="user-name">Warley Souza</span>
+            <span class="user-login">warleys14</span>
         </div>
     </div>
 </template>
@@ -15,17 +15,29 @@
 </script>
 
 
-<style>
+<style scoped>
     .user-profile{
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 50px;  
+        gap: 30px;  
     }
     .user-infos{
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .user-name{
+        font-size: 2rem;
+        font-weight: bolder;
+        color: #42B883;
+    }
+
+    .user-login{
+        font-size: 1.5rem;
+        color: #42B883;
     }
 
     img{
