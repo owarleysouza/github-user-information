@@ -1,15 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Header/>
+  <HomeUser v-if="!searchedUser"/>
+  <UserCard v-if="searchedUser"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue';
+import HomeUser from './components/HomeUser.vue';
+import UserCard from './components/UserCard.vue';
+
 
 export default {
   name: 'App',
+  data() {
+    return {
+      searchedUser: false
+    } 
+  },
   components: {
-    HelloWorld
+    HomeUser,
+    Header,
+    UserCard
   }
 }
 </script>
@@ -20,7 +31,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #ffffff;
+  background-color: #24292D;
 }
 </style>
