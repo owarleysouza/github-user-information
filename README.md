@@ -23,3 +23,8 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Github API
+Para obter os dados necessários sobre um usuário que foi buscado, eu usei a API do Github, através dos dois endpoints abaixo:
+- https://api.github.com/users/USERNAME
+- https://api.github.com/users/USERNAME/repos
