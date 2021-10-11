@@ -32,5 +32,6 @@ export default {
   text-align: center;
   color: #ffffff;
   background-color: #24292D;
+  height: 100vh;
 }
 </style>
