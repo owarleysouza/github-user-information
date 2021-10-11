@@ -1,7 +1,7 @@
 <template>
     <div class="info-container">
-        <h3>{{title}}</h3>
-        <span>{{quantity}}</span>
+        <span class="title">{{title}}</span>
+        <span class="quantity">{{quantity}}</span>
     </div>
 </template>
 
@@ -25,22 +25,21 @@
 
 <style scoped>
     .info-container{
-        border: none;
-        border-radius: 10px;
         display: flex;
         flex-direction: column;
-        height: 9rem;
-        width: 15rem;
-        background-color: #fff;
-        margin: 3rem 4.5rem;
+        padding: 5px 0px;
+        padding-right: 10px;
+        gap: 5px 0px;
     }
 
-    h3{
+    .title{
         color: #42B883;
+        font-weight: bolder;
+        font-size: 0.8rem;
     }
 
-    span{
-        font-size: 3.2rem;
+    .quantity{
+        font-size: 1.2rem;
         font-weight: bolder;
         color: #42B883;
     }

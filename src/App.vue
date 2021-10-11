@@ -6,8 +6,8 @@
 
 <script>
 import Header from './components/Header.vue';
-import HomeNotUser from './components/HomeNotUser.vue';
-import HomeUser from './components/HomeUser.vue';
+import HomeNotUser from './pages/HomeNotUser.vue';
+import HomeUser from './pages/HomeUser.vue';
 
 export default {
   name: 'App',
