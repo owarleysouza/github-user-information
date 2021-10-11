@@ -2,7 +2,7 @@
     <div class="card-container">
         <InfoCard title= "Followers" :quantity="userFollowers"/>
         <InfoCard title= "Following" :quantity="userFollowings"/>
-        <InfoCard title= "Repos" :quantity="userRepos"/>
+        <InfoCard title= "Repositories" :quantity="userRepos"/>
     </div>
 </template>
 
@@ -39,5 +39,6 @@
         grid-template-columns: 1fr 1fr 1fr;
         align-items: center;
         justify-content: center;
+        margin-top: 0.8rem;
     }
 </style>

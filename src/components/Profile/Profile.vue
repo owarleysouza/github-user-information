@@ -1,5 +1,5 @@
 <template>
-    <div class="user-profile">
+    <div class="user-profile-container">
         <img alt="User Photo" src="https://avatars.githubusercontent.com/u/29213158?v=4">
         <div class="user-infos">
             <span class="user-name">{{userName}}</span>
@@ -50,12 +50,13 @@
 
 
 <style scoped>
-    .user-profile{
+    .user-profile-container{
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 30px;  
+        gap: 30px;
+        margin-top: 1.5rem;  
     }
     .user-infos{
         display: flex;
@@ -67,12 +68,14 @@
         font-size: 2rem;
         font-weight: bolder;
         color: #42B883;
+        margin-left: 0.3rem;
     }
 
     .user-login{
         font-size: 1.5rem;
         color: #42B883;
         font-weight: bolder;
+        margin-left: 0.3rem;
     }
 
     img{
