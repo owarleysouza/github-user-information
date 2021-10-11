@@ -2,15 +2,30 @@
     <div class="header-container">
         <h2>GitInfo</h2>
         <div>
-            <input placeholder="Digite um usuário"/>
-            <button>Pesquisar</button>
+            <input v-model.trim="userLogin" placeholder="Digite um usuário"/>
+            <button type="button" @click="searchUser(userLogin)">Pesquisar</button>
         </div>
     </div>
 </template>
 
 <script>
+    import axios from 'axios';
+
     export default{
-        name: "Header"
+        name: "Header",
+        data(){
+            return {
+                userLogin: '',
+                userData: {}
+            }
+        },
+        methods:{
+            async searchUser(userLogin){
+                const response = await axios.get(`https://api.github.com/users/${userLogin}`);
+                this.userData = response.data;
+                console.log(this.userData);
+            }
+        }
     }
 </script>
 
@@ -48,5 +63,9 @@
         background-color: #42B883;
         color: white;
         padding: 8px;
+    }
+
+    p{
+        color: #fff;
     }
 </style>
