@@ -1,14 +1,24 @@
 <template>
     <div class="info-container">
-        <h4>Followers</h4>
-        <span>60</span>
+        <h3>{{title}}</h3>
+        <span>{{quantity}}</span>
     </div>
 </template>
 
 
 <script>
     export default{
-        name: "InfoCard"
+        name: "InfoCard",
+        props: {
+            title: {
+                type: String,
+                required: true,
+            },
+            quantity: {
+                type: Number,
+                required: true,
+            }
+        }
     }
 </script>
 
@@ -20,12 +30,12 @@
         display: flex;
         flex-direction: column;
         height: 9rem;
-        width: 11rem;
+        width: 15rem;
         background-color: #fff;
         margin: 3rem 4.5rem;
     }
 
-    h4{
+    h3{
         color: #42B883;
     }
 

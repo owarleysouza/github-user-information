@@ -1,14 +1,24 @@
 <template>
     <div class="repo-container">
-        <img alt="repo-icon" src="../assets/folder.png"/>
-        <span>study-vue-repo</span>
-        <a>warleys14/study-vue-repo</a>
+        <img alt="repo-icon" src="../../assets/folder.png"/>
+        <span>{{repositoryName}}</span>
+        <a :href="repositoryLink">{{repositoryLink}}</a>
     </div>
 </template>
 
 <script>
     export default{
         name: "RepoCard",
+        props: {
+            repositoryName: {
+                type: String,
+                required: true
+            },
+            repositoryLink: {
+                type: String,
+                required: true
+            },
+        }
     }
 </script>
 
@@ -36,11 +46,6 @@
     span{
         color: #42B883;
         font-weight: bolder;
-    }
-
-    a{
-        color: #0440c0;
-        text-decoration: underline blue;
     }
 
 </style>

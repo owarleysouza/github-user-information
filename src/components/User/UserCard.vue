@@ -1,16 +1,27 @@
 <template>
     <div class="user-profile">
-        <img alt="User Photo" src="../assets/blank-avatar.png">
+        <img alt="User Photo" src="../../assets/blank-avatar.png">
         <div class="user-infos">
-            <span class="user-name">Warley Souza</span>
-            <span class="user-login">warleys14</span>
+            <span class="user-name">{{userName}}</span>
+            <span class="user-login">{{userLogin}}</span>
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        name: "UserCard"
+        name: "UserCard",
+        props: {
+            userName:{
+                type: String,
+                required: true
+            },
+            userLogin:{
+                type: String,
+                required: true
+            }     
+        }
+
     }
 </script>
 

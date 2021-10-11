@@ -1,17 +1,13 @@
 <template>
   <Header/>
   <HomeNotUser v-if="!searchedUser"/>
-  <UserCard v-if="searchedUser"/>
-  <UserInfos/>
-  <UserRepos/>
+  <HomeUser v-if="searchedUser"/>
 </template>
 
 <script>
 import Header from './components/Header.vue';
 import HomeNotUser from './components/HomeNotUser.vue';
-import UserCard from './components/UserCard.vue';
-import UserInfos from './components/UserInfos.vue';
-import UserRepos from './components/UserRepos.vue'
+import HomeUser from './components/HomeUser.vue';
 
 export default {
   name: 'App',
@@ -21,11 +17,9 @@ export default {
     } 
   },
   components: {
-    HomeNotUser,
     Header,
-    UserCard,
-    UserInfos,
-    UserRepos
+    HomeNotUser,
+    HomeUser,
   }
 }
 </script>
