@@ -32,6 +32,9 @@ export default {
   text-align: center;
   color: #ffffff;
   background-color: #24292D;
-  height: 100vh;
+  min-height: 100vh;
+  max-height: fit-content;
+  min-width: 100vw;
+  max-width: fit-content;
 }
 </style>
