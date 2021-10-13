@@ -36,6 +36,7 @@
         background-color: #fff;
         margin: 3rem 4.5rem;
         gap: 5px;
+        padding: 5px;
     }
 
     img{
