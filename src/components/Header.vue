@@ -2,7 +2,7 @@
     <div class="header-container">
         <h2>GitInfo</h2>
         <div>
-            <input v-model.trim="userLoginSearch" placeholder="Digite um usuário"/>
+            <input v-model.trim="userLoginSearch" placeholder="Digite um usuário" @keyup.enter="searchUser(userLoginSearch)"/>
             <button type="button" @click="searchUser(userLoginSearch)">Pesquisar</button>
         </div>
     </div>
