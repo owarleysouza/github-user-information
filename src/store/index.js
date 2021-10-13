@@ -5,11 +5,13 @@ export default createStore({
     strict: true,
     state: {
         user: {},
-        repos: []
+        repos: [],
+        searchedUser: false
     },
     mutations: {
         loadUser(state, payload){
             state.user = payload;
+            state.searchedUser = true;
         },
         loadRepos(state, payload){
             state.repos = payload;

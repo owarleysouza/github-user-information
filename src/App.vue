@@ -1,7 +1,7 @@
 <template>
   <Header/>
-  <HomeNotUser v-if="!searchedUser"/>
-  <HomeUser v-if="searchedUser"/>
+  <HomeNotUser v-if="!hasSearchedUser"/>
+  <HomeUser v-if="hasSearchedUser"/>
 </template>
 
 <script>
@@ -11,15 +11,15 @@ import HomeUser from './pages/HomeUser.vue';
 
 export default {
   name: 'App',
-  data() {
-    return {
-      searchedUser: true
-    } 
-  },
   components: {
     Header,
     HomeNotUser,
     HomeUser,
+  },
+  computed:{
+    hasSearchedUser(){
+      return this.$store.state.searchedUser //valor que está na store, e sua referência é acessada e retornada em hasSearchedUser, assim HomeUser ou HomeNotUser é renderizado
+    }
   }
 }
 </script>
