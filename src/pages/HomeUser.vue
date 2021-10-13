@@ -2,9 +2,9 @@
     <Profile
         userName="Warley Souza"
         userLogin="warleys14"
-        :userFollowers="20"
-        :userFollowings="10"
-        :userRepos="15"
+        :userFollowers="$store.state.user.followers"
+        :userFollowings="$store.state.user.following"
+        :userRepos="$store.state.user.public_repos"
     />
     <UserRepos/>
 </template>

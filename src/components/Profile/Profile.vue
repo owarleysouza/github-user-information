@@ -1,9 +1,9 @@
 <template>
     <div class="user-profile-container">
-        <img alt="User Photo" src="https://avatars.githubusercontent.com/u/29213158?v=4">
+        <img alt="User Photo" :src="$store.state.user.avatar_url">
         <div class="user-infos">
-            <span class="user-name">{{userName}}</span>
-            <span class="user-login">{{userLogin}}</span>
+            <span class="user-name">{{$store.state.user.name}}</span>
+            <span class="user-login">{{$store.state.user.login}}</span>
             <UserStats 
                 :userFollowers="userFollowers"
                 :userFollowings="userFollowings"

@@ -2,8 +2,8 @@
     <div class="header-container">
         <h2>GitInfo</h2>
         <div>
-            <input v-model.trim="userLogin" placeholder="Digite um usuário"/>
-            <button type="button" @click="searchUser(userLogin)">Pesquisar</button>
+            <input v-model.trim="userLoginSearch" placeholder="Digite um usuário"/>
+            <button type="button" @click="searchUser(userLoginSearch)">Pesquisar</button>
         </div>
     </div>
 </template>
@@ -15,16 +15,23 @@
         name: "Header",
         data(){
             return {
-                userLogin: '',
-                userData: {}
+                user: {},
+                repos: [],
+                userLoginSearch: '',
             }
         },
         methods:{
             async searchUser(userLogin){
-                const response = await axios.get(`https://api.github.com/users/${userLogin}`);
-                this.userData = response.data;
-                console.log(this.userData);
-            }
+                const responseUser = await axios.get(`https://api.github.com/users/${userLogin}`);
+                this.user = responseUser.data;
+                this.$store.commit('loadUser', this.user);
+
+                const responseRepos = await axios.get(`https://api.github.com/users/${userLogin}/repos`);
+                this.repos = responseRepos.data;
+                this.$store.commit('loadRepos', this.repos);
+                console.log(this.$store.state.repos)
+            },
+            
         }
     }
 </script>
@@ -35,7 +42,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        margin: 0 4.8rem;
+        margin: 0 6.4rem 0 4.4rem;
     }
 
     h2{
@@ -50,7 +57,7 @@
         border: none;
         border-radius: 5px 0px 0px 5px;
         height: 2rem;
-        width: 20rem;
+        width: 18rem;
         padding-left: 10px;
     }
 
@@ -63,6 +70,7 @@
         background-color: #42B883;
         color: white;
         padding: 8px;
+        cursor: pointer;
     }
 
     p{

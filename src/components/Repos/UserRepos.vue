@@ -1,10 +1,12 @@
 <template>
     <div class="card-container">
-        <RepoCard repositoryName="study-vue-repo" repositoryLink="warleys14/study-vue-repo"/>
-        <RepoCard repositoryName="study-react-repo" repositoryLink="warleys14/study-react-repo"/>
-        <RepoCard repositoryName="study-go-repo" repositoryLink="warleys14/study-go-repo"/>
-        <RepoCard repositoryName="study-js-repo" repositoryLink="warleys14/study-js-repo"/>
+        <RepoCard 
+            v-for="repo in this.$store.state.repos"
+            :key="repo.id"
+            :repositoryName="repo.name"
+            :repositoryLink="repo.full_name"/>
     </div>
+    <p>{{reposData}}</p>
 </template>
 
 
@@ -22,9 +24,10 @@
 
 <style scoped>
     .card-container{
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
     }
 </style>
