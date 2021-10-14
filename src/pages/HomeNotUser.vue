@@ -24,4 +24,16 @@
         height: 250px;
         width: 250px;
     }
+
+    @media (max-width: 700px){
+        img{
+            height: 35%;
+            width: 35%;
+        }
+
+        h3{
+            font-size: 1.1rem;
+        }
+    }
+
 </style>
