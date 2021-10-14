@@ -37,4 +37,8 @@ export default {
   min-width: 100vw;
   max-width: fit-content;
 }
+
+html{
+  background-color: #24292D;
+}
 </style>
