@@ -1,7 +1,7 @@
 <template>
     <div class="header-container">
         <h2>GitInfo</h2>
-        <div>
+        <div class="form">
             <input v-model.trim="userLoginSearch" placeholder="Digite um usuário" @keyup.enter="searchUser(userLoginSearch)"/>
             <button type="button" @click="searchUser(userLoginSearch)">Pesquisar</button>
         </div>
@@ -56,7 +56,7 @@
         font-weight: bold;
         border: none;
         border-radius: 5px 0px 0px 5px;
-        height: 2rem;
+        height: 2.3em;
         width: 18rem;
         padding-left: 10px;
     }
@@ -66,14 +66,37 @@
         font-weight: bolder;
         border: none;
         border-radius: 0px 5px 5px 0px;
-        height: 2.1rem;
+        height: 2.5em;
         background-color: #42B883;
         color: white;
-        padding: 8px;
         cursor: pointer;
     }
 
     p{
         color: #fff;
     }
+
+    @media (max-width: 700px){
+        .header-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .form{
+            width: 100vw;
+        }
+
+        input{
+            width: 9rem;
+            height: 2.3em;
+        }
+
+        button{
+            height: 2.5em;
+            padding: 0 8px;
+        }
+    }
+
 </style>

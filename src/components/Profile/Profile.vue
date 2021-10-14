@@ -84,4 +84,18 @@
         border-radius: 2rem;
         border: #42B883 solid;
     }
+
+    @media (max-width: 500px){
+        .user-profile-container{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .user-infos{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    }
+    }
+
 </style>
